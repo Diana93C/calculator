@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #400952, #400952);
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 240px;
+    background: #9f3275;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+#display {
+    background: #822c54;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 12px;
+    text-align: right;
+    height: 60px;          /* 🔥 fixed height */
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#expression {
+    font-size: 2.3rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+#result {
+    font-size: 1.1rem;
+    color: #aaa;
+    min-height: 20px;      /* 🔹 reserved space */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 55px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.number {
+    background: #5e1b74;
+    color: white;
+}
+
+.operator {
+    background: #b77a25;
+    color: white;
+}
+
+.equal {
+    background: #1e7032;
+    color: white;
+    font-size: 1.2rem;
+
+    grid-row: span 2;        /* 🔥 makes it vertical */
+    height: 100%;            /* fills both rows */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;     /* vertical rectangle look */
+}
+
+.zero {
+    grid-column: span 2;
+}
